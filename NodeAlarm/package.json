@@ -1,0 +1,14 @@
+{
+  "name": "node-alarm",
+  "version": "0.0.0",
+  "description": "NodeAlarm",
+  "main": "app.js",
+  "author": {
+    "name": "vsantana"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "http": "0.0.0",
+    "serialport": "^4.0.7"
+  }
+}

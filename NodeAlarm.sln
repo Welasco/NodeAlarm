@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeAlarm", "NodeAlarm\NodeAlarm.njsproj", "{9E0A419E-589E-49A8-9A5C-13BFBA8FCE97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmartThing", "SmartThing", "{703BEBAE-8FF8-4CD0-9F84-1504DE7F7739}"
+	ProjectSection(SolutionItems) = preProject
+		DSCAlarmApp.groovy = DSCAlarmApp.groovy
+		DSCAlarmDeviceType.groovy = DSCAlarmDeviceType.groovy
+		DSCOpenCloseDeviceType.groovy = DSCOpenCloseDeviceType.groovy
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DSC IT-100", "DSC IT-100", "{259E0EAF-21D8-4905-96D1-3FC84CA7251D}"
+	ProjectSection(SolutionItems) = preProject
+		DSC-IT100-Deleveloper.pdf = DSC-IT100-Deleveloper.pdf
+		DSC-it100.pdf = DSC-it100.pdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E0A419E-589E-49A8-9A5C-13BFBA8FCE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0A419E-589E-49A8-9A5C-13BFBA8FCE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0A419E-589E-49A8-9A5C-13BFBA8FCE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0A419E-589E-49A8-9A5C-13BFBA8FCE97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
