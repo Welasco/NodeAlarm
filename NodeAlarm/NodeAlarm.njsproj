@@ -32,6 +32,7 @@
   <ItemGroup>
     <Compile Include="dscalarm.js" />
     <Compile Include="config.js" />
+    <Compile Include="listserialports.js" />
     <Compile Include="test.js" />
     <Compile Include="test2.js" />
     <Content Include="package.json" />
