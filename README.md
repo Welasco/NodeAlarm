@@ -142,6 +142,42 @@ Using your shard (SmartThing IDE Web Site) we will install your DSCAlarm Open/Cl
  - Now Copy and Paste the file content to and click Create.
  - Click in Publish then For Me.
 
+Creating Device Types
+----------------------
+Now we will create the device types that we just have installed.
+Using your shard (SmartThing IDE Web Site) we will create your DSCAlarm Alarm Device type. Here is the steps:
+ - Click on My Devices.
+ - Click New Deice.
+ - A form with a couple of fields will open, we need to full fill the follwing fields:
+   - Name: DSCAlarm
+   - Label: DSCAlarm
+   - Device Network ID: dscalarmtype
+   - Type: DSCAlarmDeviceType
+   - Location: <Your Location>
+   - Hub: <Your HUB>
+ - Click Create.
+
+__The DSCAlarmDeviceType Device Network ID is hardcoded in the DSCAlarm App at method updateAlarmDeviceType close to line 219.__
+
+Now it's time to create DSCAlarm Open/Close Sensor.
+We will create one device "DSCAlarm Open/Close Sensor" per zone that you have on your alarm.
+Using your shard (SmartThing IDE Web Site) we will create your DSCAlarm Open/Close Device type. Here is the steps:
+ - Click on My Devices.
+ - Click New Deice.
+ - A form with a couple of fields will open, we need to full fill the follwing fields:
+   - Name: Zone1
+   - Label: Zone1
+   - Device Network ID: dsczone001
+   - Type: DSCOpenCloseDeviceType
+   - Location: <Your Location>
+   - Hub: <Your HUB>
+ - Click Create.
+
+Don't forget to create one "DSCAlarm Open/Close Sensor" per zone replacing the zone number with your zone.
+The Device Network ID must have to have the 00 before the zone number like dsczone001, dsczone002, dsczone003.
+ 
+__The DSCOpenCloseDeviceType Device Network ID is hardcoded in the DSCAlarm App at method updateZoneDeviceType close to line 184.__
+
 Configuring OAuth Authentication
 ---------------------------------
 In order to allow NodeJS Web requests to access SmartThing Smart App we need to create an access token and get the AppID.
