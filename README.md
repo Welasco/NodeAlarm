@@ -21,7 +21,7 @@ For that reason I decided to implement using a Raspberry Pi running NodeJS and S
 Prerequisites
 --------------
 * Compatible DSC Alarm System 
-* IT-100 interface <br/> [Link](http://www.dsc.com/index.php?n=products&o=view&id=22)
+* [IT-100 interface](http://www.dsc.com/index.php?n=products&o=view&id=22)
 * Raspberry PI 
 
 
