@@ -247,7 +247,20 @@ Test URL:
 
 In case you would like to close the senssor just replace the command ZN-609001 to ZN-610001.
 
+__Now we need to change the config.js file on your Raspberry Pi. You need to update both appid and accesstoken. Save the file and restart the service typing "sudo systemctl restart dscalarm".__
 
+Configuring SmartThing Mobile App
+---------------------------------
+Now open SmartThings Mobile app on your phone. Go to Marketplace area. In the top menu touch in SmartApps.
+Scrool all way down until My Apps. You will see DSCAlarm App listed, touch to open.
+We have two sections DSCAlarmType and MonitoredZones. Select our DSCAlarmDeviceType in DSCAlarmType and select all available Zones in Monitored Zones. Touch in Done.
+It will allow the DSCSmartApp to access those device types.
+
+Here is the last step we need to setup your Raspberry Pi IP Address in your alarm virtual device.
+In your SmartThing mobile app go to MY Home area. Open DSCAlarmDeviceType you will see the tiles where you will be able to manage your alarm. In the top right corner touch in the little engine icon.
+In the Server IP Address type your Raspberry Pi IP Address. In Server Port type 3000 and touch Done.
+
+Now you are able to Arm and Disarm your Alarm just touching in the desired option in your screen.
 
 
 
