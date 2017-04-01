@@ -1,4 +1,5 @@
-﻿/*
+﻿#!/usr/bin/env node
+/*
  DSC Alarm Bridge
  This NodeJS code will work like a bridge/proxy between Smartthings and DSC IT-100 Serial board
  This code will monitor the DSC IT-100 Serial board and will send the received commands to SmartThings ServiceManager (Also known as SmartApp)
