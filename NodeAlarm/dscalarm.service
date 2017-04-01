@@ -1,0 +1,15 @@
+﻿[Unit]
+Description=DSCAlarm
+After=network.target
+
+[Service]
+ExecStart=/home/pi/dscalarm/dscalarm.js
+Restart=always
+User=pi
+Group=pi
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/pi/dscalarm
+
+[Install]
+WantedBy=multi-user.target

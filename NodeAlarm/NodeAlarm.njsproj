@@ -35,6 +35,7 @@
     <Compile Include="listserialports.js" />
     <Compile Include="test.js" />
     <Compile Include="test2.js" />
+    <Content Include="dscalarm.service" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
