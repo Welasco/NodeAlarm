@@ -268,6 +268,7 @@ After some time using this project I found a couple of problems related with USB
 Some times it just stop sending and receiving data. 
 Using dmesg I found this error: "ftdi_sio ttyUSB0: usb_serial_generic_read_bulk_callback - urb stopped: -32".
 I did a internet research and found this link with a solution that worked for me: https://github.com/raspberrypi/linux/issues/1187
+
 You have to open /boot/cmdline.txt and add an entry to dwc_otg.speed=1. It changed the USB Bus speed to USB 1.1 but fix the issue.
 Here is how my /boot/cmdline.txt looks like:
 
