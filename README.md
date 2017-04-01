@@ -5,10 +5,10 @@ I'm really gratefull that very knowldgeble guys have shared their research and p
 
 This project was inspired in those projects:
 
-https://github.com/entrocode/SmartDSC
-https://github.com/isriam/smartthings-alarmserver/
-https://github.com/kholloway/smartthings-dsc-alarm
-https://github.com/yracine/DSC-Integration-with-Arduino-Mega-Shield-RS-232
+ - https://github.com/entrocode/SmartDSC
+ - https://github.com/isriam/smartthings-alarmserver/
+ - https://github.com/kholloway/smartthings-dsc-alarm
+ - https://github.com/yracine/DSC-Integration-with-Arduino-Mega-Shield-RS-232
 
 
 History
