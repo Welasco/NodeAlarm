@@ -533,7 +533,7 @@ function sendHttpRequest(pathURL) {
     //https://graph-na02-useast1.api.smartthings.com/api/smartapps/installations/af13cf06-0d14-451f-93de-40ec0189d142/switches/on?access_token=beba4dbc-5513-4149-a7f5-4d89ff8967ab
 
     var options = {
-        host: 'graph-na02-useast1.api.smartthings.com',
+        host: config.shardlocation,
         port: 443,
         path: pathURL,
         method: 'GET'
