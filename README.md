@@ -262,6 +262,16 @@ In the Server IP Address type your Raspberry Pi IP Address. In Server Port type 
 
 Now you are able to Arm and Disarm your Alarm just touching in the desired option in your screen.
 
+Troubleshooting
+---------------
+After some time using this project I found a couple of problems related with USB Serial cable and Raspberry Pi.
+Some times it just stop sending and receiving data. 
+Using dmesg I found this error: "ftdi_sio ttyUSB0: usb_serial_generic_read_bulk_callback - urb stopped: -32".
+I did a internet research and found this link with a solution that worked for me: https://github.com/raspberrypi/linux/issues/1187
+You have to open /boot/cmdline.txt and add an entry to dwc_otg.speed=1. It changed the USB Bus speed to USB 1.1 but fix the issue.
+Here is how my /boot/cmdline.txt looks like:
 
+		dwc_otg.speed=1 dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
 
+I hope it can help you too.
 
