@@ -37,6 +37,21 @@ Required Software
 * Forever
 * SmartThing developer Access
 
+Preparing Raspberry PI
+----------------------
+Install the latest available Raspbian Linux on your Raspberry PI. Official link with step by step available [Here](https://www.raspberrypi.org/documentation/installation/installing-images/).
+After you have installed Raspbian I would recommend update all available packets, just run "sudo apt-get update" then "sudo apt-get upgrade".
+
+Keep in mind the easyest way to set a static IP address on your Raspberry. 
+The SmartThing HUB will send web request to NodeJS, your Raspberry PI IP address will be configured in the DSCAlarmDeviceType using SmartThing app in your phone.
+That's how SmartThing HUB knows how to reach your Raspberry PI. If you prefer you can just go to your DHCP in your house and reserv an IP to you Raspberry PI using MAC.
+There is a really good step by step [Here](http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi/) covering almost everything we need.
+
+Now it's time to install NodeJS. Just type sudo "apt-get install nodejs".
+
+
+
+
 
 
 
