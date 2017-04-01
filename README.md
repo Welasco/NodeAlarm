@@ -142,6 +142,17 @@ Using your shard (SmartThing IDE Web Site) we will install your DSCAlarm Open/Cl
  - Now Copy and Paste the file content to and click Create.
  - Click in Publish then For Me.
 
+Configuring OAuth Authentication
+---------------------------------
+In order to allow NodeJS Web requests to access SmartThing Smart App we need to create an access token and get the AppID.
+Using your shard (SmartThing IDE Web Site) we will  we will enable OAuth for DSCAlarm Smart App. Here is the steps:
+ - Click on My SmartApps.
+ - Click on the DSCAlarm App that we have created.
+ - The code view will be opened, click on App Settings.
+ - Click OAuth.
+ - Click Enable OAuth in Smart App.
+ - Copy the Client ID and Client Secret that was generated.
+
 
 
 
