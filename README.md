@@ -34,7 +34,6 @@ Required Software
 -----------------
 * Raspbian (latest)
 * NodeJS
-* Forever
 * SmartThing developer Access
 
 Preparing Raspberry PI
@@ -42,9 +41,9 @@ Preparing Raspberry PI
 Install the latest available Raspbian Linux on your Raspberry PI. Official link with step by step available [HERE](https://www.raspberrypi.org/documentation/installation/installing-images/).
 After you have installed Raspbian I would recommend update all available packets, just run "sudo apt-get update" then "sudo apt-get upgrade".
 
-Keep in mind the easyest way to set a static IP address on your Raspberry. 
-The SmartThing HUB will send web request to NodeJS, your Raspberry PI IP address will be configured in the DSCAlarmDeviceType using SmartThing app in your phone.
-That's how SmartThing HUB knows how to reach your Raspberry PI. If you prefer you can just go to your DHCP in your house and reserv an IP to you Raspberry PI using MAC.
+Keep in mind the easyest way to implement this project is configuring a static IP address on your Raspberry Pi. 
+The SmartThing HUB will send web request to NodeJS, your Raspberry Pi IP address will be configured in the DSCAlarmDeviceType using SmartThing app in your phone.
+That's how SmartThing HUB knows how to reach your Raspberry Pi. If you prefer you can just go to your DHCP in your house and reserv an IP to you Raspberry PI using MAC.
 There is a really good step by step [HERE](http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi/) covering almost everything we need.
 
 Now it's time to install NodeJS. Just type sudo "apt-get install nodejs".
@@ -71,17 +70,17 @@ Let's test if everything is right. Now we will run the dscalarm.js for the first
 		DSCAlarm Started
 		Serial Port opened: /dev/ttyUSB0 BaudRate: 9600
 
-The default port is configured to 3000 in config.js. You can now open your browser and check if you can access like: http://<RaspberryPI-IPAddress>:3000/. 
+The default port is configured to 3000 in config.js. You can now open your browser and check if you can access like: http://\<RaspberryPI-IPAddress>:3000/. 
 We expect to have a message saying "DSC Alarm Running".
 
 If you receve the message it means you have done a good job so far :).
 
 Now we will test the communication between DSC IT-100 and your Raspberry PI.
 Plug your USB to Serial cable to "DSC IT-100".
-Open your browser and access http://<RaspberryPI-IPAddress>:3000/api/alarmArmAway
+Open your browser and access http://\<RaspberryPI-IPAddress>:3000/api/alarmArmAway
 It will send a command to your alarm to Arm. Your alarm keypad will start beeping and preparing the system to arm.
 Before we test if we can disarm the alarm we need to setup your password on config.js file. Open the file and update the config entry alarmpassword with your password.
-To test if the system will disarm open your browser one more time and access http://<RaspberryPI-IPAddress>:3000/api/alarmArmAway
+To test if the system will disarm open your browser one more time and access http://\<RaspberryPI-IPAddress>:3000/api/alarmArmAway
 Your alarm will desarm.
 
 Now let's make DSCAlarm work as a service.
@@ -95,6 +94,34 @@ Reference: https://certsimple.com/blog/deploy-node-on-linux
 
 Lets restart your Raspberry Pi and check if dscalarm is up and running. Don't forget to let the USB to Seral cable plugged, if it's not plugged it will fail.
 Check if you can arm and disarm your alarm accessing the URLs that we have already used.
+
+If you reach at this poing it means you are able to arm and disarm the alarm using the URLs above and you are ready to start preparing the code on Smartthings.
+
+Preparing SmartThing Code
+--------------------------
+First you need to determine your shard location. Shard is where your SmartThing account is hosted. In order to figure it out access this link [HERE](https://community.smartthings.com/t/faq-how-to-find-out-what-shard-cloud-slice-ide-url-your-account-location-is-on/53923).
+Usually if your SmartThing account was created after september 2015 your shard will be: graph-na02-useast1.api.smartthings.com.
+
+Now lets access your SmartThing shard and login with your SmartThing account if everything is fine you will be able to see all yours SmartThings devices in the Menu "My Devices".
+Keep in mind that if your account is empty nothing will be listed.
+
+The SmartThings have 3 main files:
+ - DSCAlarmApp.groovy
+ - DSCAlarmDeviceType.groovy
+ - DSCOpenCloseDeviceType.groovy
+
+__DSCAlarmApp.groovy__:
+
+This is our SmartApp (Service Manager). This is where we handle the Web requests that NodeJS will send to SmartThings.
+Using your shard (SmartThing IDE Web Site) we will install your DSCAlarm Smpart App. Here is the steps:
+ - Click on My SmartApps.
+ - Click From Code.
+ - Now Copy and Paste the file content to and click Create.
+ - Click in Publish then For Me.
+
+__DSCAlarmDeviceType.groovy__:
+ 
+
 
 
 
