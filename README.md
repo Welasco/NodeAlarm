@@ -4,9 +4,9 @@ Credits
 I'm really gratefull that very knowldgeble guys have shared their research and projects in github and forums.
 This project was inspired in those projects:
 
-https://github.com/entrocode/SmartDSC
-https://github.com/isriam/smartthings-alarmserver/
-https://github.com/kholloway/smartthings-dsc-alarm
+https://github.com/entrocode/SmartDSC <br>
+https://github.com/isriam/smartthings-alarmserver/ <br>
+https://github.com/kholloway/smartthings-dsc-alarm <br>
 https://github.com/yracine/DSC-Integration-with-Arduino-Mega-Shield-RS-232
 
 
