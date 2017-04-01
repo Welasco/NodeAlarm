@@ -15,18 +15,28 @@ History
 -------
 This is just one more variant available to make your DSCAlarm system Smart with SmartThings.
 
-The majority of those amazing projects available are using EnvisaLink board.
+The majority of those amazing projects available are using EnvisaLink board. If you already have one I suggest to you to use one of them.
 
-My favority project is the one that implement using Arduino but unfortunately the SmartThing Shield is deprecated and no longer available in the market.
+My favority project is the one using Arduino but unfortunately the SmartThing Shield is deprecated and no longer available in the market.
 
-I already have the DSC IT-100 board it doesn't make sence buy another one just to make it work.
+I already have the DSC IT-100 board for that reason I decided to use it.
 
-For that reason I decided to implement using a Raspberry Pi running NodeJS and SmartThings REST API.
+The project is on top of Raspberry Pi running NodeJS and SmartThings REST API.
 
 Prerequisites
 --------------
 * Compatible DSC Alarm System 
 * [IT-100 interface](http://www.dsc.com/index.php?n=products&o=view&id=22)
-* Raspberry PI 
+* [Raspberry PI](https://www.raspberrypi.org/products/)
+* [USB to Serial cable](https://www.insigniaproducts.com/pdp/NS-PU99501/5883029)
+
+Required Software
+-----------------
+* Raspbian (latest)
+* NodeJS
+* Forever
+* SmartThing developer Access
+
+
 
 
