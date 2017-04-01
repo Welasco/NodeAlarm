@@ -56,6 +56,7 @@ Now copy the following files under /home/pi/dscalarm:
  - dscalarm.js
  - listserialports.js
  - package.json
+ - dscalarm.service
 
 Install all project dependencies using npm. Make sure you are in /home/pi/dscalarm and type "npm install". It will download all dependencies under /home/pi/dscalarm/node_modules.
 
@@ -70,12 +71,30 @@ Let's test if everything is right. Now we will run the dscalarm.js for the first
 		DSCAlarm Started
 		Serial Port opened: /dev/ttyUSB0 BaudRate: 9600
 
-a
+The default port is configured to 3000 in config.js. You can now open your browser and check if you can access like: http://<RaspberryPI-IPAddress>:3000/. 
+We expect to have a message saying "DSC Alarm Running".
 
+If you receve the message it means you have done a good job so far :).
 
+Now we will test the communication between DSC IT-100 and your Raspberry PI.
+Plug your USB to Serial cable to "DSC IT-100".
+Open your browser and access http://<RaspberryPI-IPAddress>:3000/api/alarmArmAway
+It will send a command to your alarm to Arm. Your alarm keypad will start beeping and preparing the system to arm.
+Before we test if we can disarm the alarm we need to setup your password on config.js file. Open the file and update the config entry alarmpassword with your password.
+To test if the system will disarm open your browser one more time and access http://<RaspberryPI-IPAddress>:3000/api/alarmArmAway
+Your alarm will desarm.
 
+Now let's make DSCAlarm work as a service.
 
+First we need to make it executable. Type chmod +755 dscalarm.js.
+Copy the file dscalarm.service to /lib/systemd/system.
+Reload the daemons type "sudo systemctl daemon-reload". Let's make it run on boot type "sudo systemctl enable dscalarm". Now we can start dscalarm type "sudo systemctl start dscalarm".
+To check if the services is up and running type "sudo systemctl status dscalarm". To check the log type "sudo journalctl --follow -u dscalarm".
 
+Reference: https://certsimple.com/blog/deploy-node-on-linux
+
+Lets restart your Raspberry Pi and check if dscalarm is up and running. Don't forget to let the USB to Seral cable plugged, if it's not plugged it will fail.
+Check if you can arm and disarm your alarm accessing the URLs that we have already used.
 
 
 
