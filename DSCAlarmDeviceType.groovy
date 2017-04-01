@@ -9,8 +9,8 @@
 
 
 preferences {
-    input("hostaddress", "text", title: "IP Address for Server:", description: "Ex: 10.0.0.12 or 192.168.0.4 (no http://)")
-    input("hostport", "number", title: "Port of Server", description: "port")
+    input("hostaddress", "text", title: "Server IP Address:", description: "Ex: 10.0.0.12 or 192.168.0.4 (no http://)")
+    input("hostport", "number", title: "Server Port", description: "port")
 }
 
 metadata {
