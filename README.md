@@ -112,16 +112,35 @@ The SmartThings have 3 main files:
 
 __DSCAlarmApp.groovy__:
 
-This is our SmartApp (Service Manager). This is where we handle the Web requests that NodeJS will send to SmartThings.
+That's our SmartApp (Service Manager). This is where we handle the Web requests that NodeJS will send to SmartThings.
 Using your shard (SmartThing IDE Web Site) we will install your DSCAlarm Smpart App. Here is the steps:
  - Click on My SmartApps.
+ - Click New SmartApp.
  - Click From Code.
  - Now Copy and Paste the file content to and click Create.
  - Click in Publish then For Me.
 
 __DSCAlarmDeviceType.groovy__:
  
+That's our DSC Alarm Device type. 
+This is the Virtual Alarm device that will be present in your SmartThing Mobile App and also where you will be able to send commands to your alarm like Arm, Disarm and configure your Raspberry Pi IP Address and Port.
+Using your shard (SmartThing IDE Web Site) we will install your DSCAlarm Device type. Here is the steps:
+ - Click on My Device Handlers.
+ - Click Create New Device Handler. 
+ - Click From Code.
+ - Now Copy and Paste the file content to and click Create.
+ - Click in Publish then For Me.
 
+__DSCOpenCloseDeviceType.groovy__:
+
+That's our Open/Close sensor.
+This is the Virtual Open/Close sensor that will be representing each Zone that you may have on your alarm.
+Using your shard (SmartThing IDE Web Site) we will install your DSCAlarm Open/Close Device type. Here is the steps:
+ - Click on My Device Handlers.
+ - Click Create New Device Handler. 
+ - Click From Code.
+ - Now Copy and Paste the file content to and click Create.
+ - Click in Publish then For Me.
 
 
 
