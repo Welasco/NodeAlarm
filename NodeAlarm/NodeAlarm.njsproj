@@ -37,7 +37,6 @@
     <Compile Include="test2.js" />
     <Content Include="dscalarm.service" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="typings\" />
