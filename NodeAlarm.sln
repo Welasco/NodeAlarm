@@ -12,12 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmartThing", "SmartThing", 
 		DSCOpenCloseDeviceType.groovy = DSCOpenCloseDeviceType.groovy
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DSC IT-100", "DSC IT-100", "{259E0EAF-21D8-4905-96D1-3FC84CA7251D}"
-	ProjectSection(SolutionItems) = preProject
-		DSC-IT100-Deleveloper.pdf = DSC-IT100-Deleveloper.pdf
-		DSC-it100.pdf = DSC-it100.pdf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
