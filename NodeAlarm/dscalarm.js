@@ -318,7 +318,7 @@ function alarmSetDate() {
         day = "0"+day
     }
     var year = date.getFullYear().toString().substring(2,4);
-    var timedate = hour+minute+month+day+year;
+    var timedate = hour+minute+monthstr+day+year;
 
     var cmd = "010" + timedate;
     cmd = appendChecksum(cmd);
