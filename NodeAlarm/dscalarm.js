@@ -299,15 +299,26 @@ function alarmUpdate() {
 // alarm Set Date Time
 function alarmSetDate() {
     
-    var hour = date.getHours();
-    var minute = date.getMinutes();
+    var date = new Date();
+    var hour = date.getHours().toString();
+    if(hour.length == 1){
+        hour = "0"+hour
+    }
+    var minute = date.getMinutes().toString();
+    if(minute.length == 1){
+        minute = "0"+minute
+    }
     var month = date.getMonth()+1;
+    var monthstr = month.toString();
+    if(monthstr.length == 1){
+        monthstr = "0"+monthstr
+    }
     var day = date.getDate().toString();
     if(day.length == 1){
         day = "0"+day
     }
     var year = date.getFullYear().toString().substring(2,4);
-    var timedate = hour.toString()+minute.toString()+month.toString()+day.toString()+year.toString();
+    var timedate = hour+minute+month+day+year;
 
     var cmd = "010" + timedate;
     cmd = appendChecksum(cmd);
