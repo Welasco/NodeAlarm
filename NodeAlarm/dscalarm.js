@@ -133,6 +133,12 @@ app.get("/api/alarmPanic", function (req, res) {
     res.end();
 });
 
+// Used to Set Alarm Date and Time
+app.get("/api/alarmSetDate", function (req, res) {
+    alarmSetDate();
+    res.end();
+});
+
 
 // Receiving AppID and AccessToken
 // I'll use it in V2
@@ -286,6 +292,24 @@ function alarmSendCode() {
 // alarm Status Request
 function alarmUpdate() {
     var cmd = "001";
+    cmd = appendChecksum(cmd);
+    sendToSerial(cmd);
+}
+
+// alarm Set Date Time
+function alarmSetDate() {
+    
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var month = date.getMonth()+1;
+    var day = date.getDate().toString();
+    if(day.length == 1){
+        day = "0"+day
+    }
+    var year = date.getFullYear().toString().substring(2,4);
+    var timedate = hour.toString()+minute.toString()+month.toString()+day.toString()+year.toString();
+
+    var cmd = "010" + timedate;
     cmd = appendChecksum(cmd);
     sendToSerial(cmd);
 }
