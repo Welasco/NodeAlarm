@@ -46,6 +46,7 @@ metadata {
         command "away"
         command "dscalarmparse"
         command "updatestatus"
+        command "alarmSetDate"
     }
 
         // Simulator metadata
@@ -116,6 +117,9 @@ metadata {
                 }
                 standardTile("panic", "device.panic", width: 1, height: 1, canChangeIcon: false, canChangeBackground: true) {
                         state "panic", label:'Panic', action:"panic", icon:"st.alarm.alarm.alarm", backgroundColor:"#ff0000"
+                }
+                standardTile("alarmsetdate", "device.alarmsetdate", width: 1, height: 1, canChangeIcon: false, canChangeBackground: true) {
+                        state "alarmsetdate", label:'DateTime', action:"alarmsetdate", icon:"st.Office.office6"
                 }
 		        valueTile("systemStatus", "device.systemStatus", inactiveLabel: false,
 		 	               decoration: "flat", width: 3, height: 1) {
@@ -482,6 +486,11 @@ def chimeToggle() {
 def panic() {
     log.debug "DSCAlarm AlarmDeviceType - Sending panic command"
     sendRaspberryCommand("alarmPanic")
+}
+
+def alarmSetDate() {
+    log.debug "DSCAlarm AlarmDeviceType - Sending alarmSetDate command"
+    sendRaspberryCommand("alarmSetDate")
 }
 
 // TODO: Need to send off, on, off with a few secs in between to stop and clear the alarm
