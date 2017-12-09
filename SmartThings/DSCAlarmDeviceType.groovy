@@ -129,7 +129,7 @@ metadata {
                         state "default", action:"refresh", icon:"st.secondary.refresh"
                 }
                 main(["alarmStatus"])
-                details(["alarmStatus","away","stay","zone5","zone6","zone4","zone1","zone2","zone3","basementBedWindow", "chime","systemStatus","refresh","panic"])
+                details(["alarmStatus","away","stay","zone5","zone6","zone4","zone1","zone2","zone3","basementBedWindow", "chime","systemStatus","refresh","panic","alarmsetdate"])
         }
 }
 
